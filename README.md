@@ -11,7 +11,7 @@
 
 ## Live Dashboard
 
-** [Click here to open the live app](https://mugeniai05-credit-var-engine.streamlit.app)**
+** [Click here to open the live app](https://credit-var-engine-8nlxf4appjqnvurtsuiahud.streamlit.app/)**
 
 No installation required — runs entirely in your browser.
 
