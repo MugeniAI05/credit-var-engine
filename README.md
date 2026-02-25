@@ -1,4 +1,4 @@
-# 📊 Credit VaR Engine
+# Credit VaR Engine
 
 A professional-grade Value-at-Risk calculator for a credit portfolio of bonds and CDS.
 
