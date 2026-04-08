@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -9,6 +10,8 @@ from models.portfolio import build_portfolio
 from models.historical_var import HistoricalVaR
 from models.monte_carlo_var import MonteCarloVaR
 from models.backtesting import run_backtest
+
+os.environ["FRED_API_KEY"] = st.secrets.get("FRED_API_KEY", "")
 
 st.set_page_config(
     page_title="Credit VaR Engine",
