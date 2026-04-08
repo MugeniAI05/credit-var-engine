@@ -36,7 +36,7 @@ st.markdown("""
     .pos { color: #ef5350; }
     .neg { color: #26a69a; }
     h1 { color: #e8eaf6 !important; opacity: 1 !important; }
-    .stSelectbox label, .stSlider label, .stMultiSelect label { color: #8b8fa8 !important; }
+    .stSelectbox label, .stSlider label, .stMultiSelect label, .stNumberInput label { color: #8b8fa8 !important; }
     div[data-testid="stSidebarContent"] { background-color: #161b2e; }
     .main .stMarkdown strong { color: #e8eaf6 !important; }
     div[data-testid="stSidebarContent"] h2 { color: #e8eaf6 !important; opacity: 1 !important; }
