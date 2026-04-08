@@ -12,7 +12,6 @@ from models.backtesting import run_backtest
 
 st.set_page_config(
     page_title="Credit VaR Engine",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -41,7 +40,7 @@ st.markdown("""
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## ⚙️ Model Configuration")
+    st.markdown("## Model Configuration")
     st.markdown("---")
 
     confidence_level = st.selectbox(
@@ -95,7 +94,7 @@ with st.sidebar:
     run_btn = st.button("▶  Run VaR Engine", type="primary", use_container_width=True)
 
 # ── Main ──────────────────────────────────────────────────────────────────────
-st.markdown("# 📊 Credit VaR Engine")
+st.markdown("# Credit VaR Engine")
 st.markdown("*Market Risk Analytics | Bonds & CDS Portfolio*")
 st.markdown("---")
 
@@ -326,13 +325,13 @@ fig7.update_layout(
 st.plotly_chart(fig7, use_container_width=True)
 
 # ── Raw data table ────────────────────────────────────────────────────────────
-with st.expander("📋 Show Backtesting Detail Table"):
+with st.expander("Show Backtesting Detail Table"):
     st.dataframe(
         bt_results['detail_df'].tail(60).style.format({
             'pnl':        '${:,.0f}',
             'var':        '${:,.0f}',
             'exceedance': '{}'
-        }).applymap(lambda v: 'color: #ef5350' if v else '', subset=['exceedance']),
+        }).map(lambda v: 'color: #ef5350' if v else '', subset=['exceedance']),
         use_container_width=True
     )
 
