@@ -66,8 +66,8 @@ def _fetch_from_fred(start, end, lookback_days) -> pd.DataFrame:
     # CDS ≠ exact bond spread due to: doc risk, cheapest-to-deliver, funding basis
     rng = np.random.default_rng(42)
     n   = len(df)
-    df["IG_CDS"] = df["IG_OAS"] + CDS_BASIS["IG_CDS"] + rng.normal(0, 3, n)
-    df["HY_CDS"] = df["HY_OAS"] + CDS_BASIS["HY_CDS"] + rng.normal(0, 8, n)
+    df["IG_CDS"] = df["IG_OAS"] + CDS_BASIS["IG_CDS"] + rng.normal(0, 0.3, n)
+    df["HY_CDS"] = df["HY_OAS"] + CDS_BASIS["HY_CDS"] + rng.normal(0, 0.8, n)
 
     # Keep only last `lookback_days` business days
     df = df.tail(lookback_days)
