@@ -35,6 +35,7 @@ st.markdown("""
     h1 { color: #e8eaf6 !important; }
     .stSelectbox label, .stSlider label, .stMultiSelect label { color: #8b8fa8 !important; }
     div[data-testid="stSidebarContent"] { background-color: #161b2e; }
+    .main .stMarkdown strong { color: #e8eaf6 !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -72,7 +73,7 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("## 📁 Portfolio Weights")
+    st.markdown("## Portfolio Weights")
 
     w_ig_bonds = st.slider("IG Corporate Bonds", 0, 100, 35)
     w_hy_bonds = st.slider("HY Corporate Bonds", 0, 100, 20)
@@ -99,7 +100,7 @@ st.markdown("*Market Risk Analytics | Bonds & CDS Portfolio*")
 st.markdown("---")
 
 if not run_btn:
-    st.info("👈  Configure your portfolio in the sidebar and click **Run VaR Engine** to begin.")
+    st.info("  Configure your portfolio in the sidebar and click **Run VaR Engine** to begin.")
 
     col1, col2 = st.columns(2)
     with col1:
